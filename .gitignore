@@ -1,0 +1,9 @@
+arb_log.txt
+arb_opportunities_found.csv
+arb_opportunities_v3.csv
+odds_data.csv
+scan_history.json
+output.txt
+__pycache__/
+*.pyc
+arb_monitor.py

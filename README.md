@@ -1,57 +1,38 @@
-# ⚡ ArbEdge — Sports Arbitrage Intelligence Dashboard
+<div align="center">
 
-Real-time sports arbitrage scanner built for Ontario-licensed sportsbooks.
+# ⚡ ArbEdge
 
-![Python](https://img.shields.io/badge/Python-3.10+-blue)
-![Streamlit](https://img.shields.io/badge/Streamlit-Dashboard-red)
-![License](https://img.shields.io/badge/License-MIT-green)
+### Real-Time Sports Arbitrage Intelligence Platform
 
-## What It Does
+[![Python](https://img.shields.io/badge/Python-3.10+-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://python.org)
+[![Streamlit](https://img.shields.io/badge/Streamlit-Dashboard-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)](https://streamlit.io)
+[![Plotly](https://img.shields.io/badge/Plotly-Interactive_Charts-3F4F75?style=for-the-badge&logo=plotly&logoColor=white)](https://plotly.com)
+[![License](https://img.shields.io/badge/License-MIT-00d4aa?style=for-the-badge)](LICENSE)
 
-ArbEdge scans live betting odds from multiple Ontario sportsbooks
-(bet365, DraftKings, BetMGM, Betway, FanDuel) and automatically
-detects **arbitrage opportunities** — situations where you can bet
-on all outcomes across different bookmakers and guarantee a profit
-regardless of the result.
+*A full-stack data engineering project that scans live betting odds from Ontario-licensed sportsbooks, detects arbitrage opportunities using probability theory, and presents actionable insights through a professional trading-style dashboard.*
 
-## Features
+</div>
 
-- **Real-time odds scanning** across 10+ sports (Soccer, NBA, NHL, UFC)
-- **Multi-market analysis** — h2h, spreads, and totals
-- **Arb Radar gauge** — shows how close the market is to arb territory
-- **Interactive profit simulator** — model potential returns
-- **One-click sportsbook links** — act on opportunities instantly
-- **Scan history tracking** — visualize market trends over time
-- **Dark trading-terminal theme** — professional Bloomberg-style UI
+---
 
-## Tech Stack
+## 📌 The Problem
 
-- **Python** — Core logic and API integration
-- **Streamlit** — Interactive web dashboard
-- **Plotly** — Data visualization and charts
-- **The Odds API** — Real-time odds data
-- **Pandas** — Data processing
+Sportsbooks independently set their own odds for sporting events. Occasionally, the odds across different bookmakers **disagree enough** that a bettor can place bets on **all possible outcomes** across different platforms and **guarantee a profit** regardless of the result. These windows last **seconds to minutes** before the market corrects itself.
 
-## The Math
+Manually checking odds across 5+ sportsbooks for hundreds of events is impossible. **ArbEdge automates this entirely.**
 
-An arbitrage exists when: (1/odds_A) + (1/odds_B) + (1/odds_C) < 1.0
+## 💡 The Solution
 
+ArbEdge is an end-to-end data pipeline that:
 
-Where each odds value comes from a DIFFERENT bookmaker.
-The difference from 1.0 is your guaranteed profit margin.
+1. **Ingests** live odds data from The Odds API across 10 sports and 3 market types
+2. **Filters** to only Ontario-licensed sportsbooks (bet365, DraftKings, BetMGM, Betway, FanDuel)
+3. **Analyzes** every market opportunity using implied probability mathematics
+4. **Detects** arbitrage where total implied probability drops below 100%
+5. **Calculates** optimal stake distribution to maximize guaranteed profit
+6. **Visualizes** everything in a real-time interactive dashboard
 
-## Live Demo
+## 🧮 How Arbitrage Works
 
-[🔗 Launch Dashboard](https://your-username-arbedge.streamlit.app)
+An arbitrage opportunity exists when the sum of implied probabilities across different bookmakers falls below 1.0.
 
-## Setup
-
-1. Clone this repo
-2. `pip install -r requirements.txt`
-3. Get a free API key from [the-odds-api.com](https://the-odds-api.com)
-4. Update the API_KEY in `dashboard.py`
-5. `streamlit run dashboard.py`
-
-## Author
-
-Built by [Mustaali Aamir Vasi] as a portfolio project combining AI, Data Engineering, and Finance.

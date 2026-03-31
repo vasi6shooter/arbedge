@@ -155,7 +155,7 @@ st.markdown("""
 # ============================================================
 # SETTINGS
 # ============================================================
-API_KEY = "91723ff6468120c30188419ec8addd05"
+API_KEY = "b685101c08c1df91983964aaf34faa8b"
 BASE_URL = "https://api.the-odds-api.com/v4/sports"
 REGIONS = "us,uk,eu,au"
 ODDS_FORMAT = "decimal"
@@ -168,15 +168,14 @@ ALLOWED_BOOKMAKERS = {
 SPORTS_CONFIG = {
     "soccer_epl": {"label": "Premier League", "emoji": "⚽"},
     "soccer_spain_la_liga": {"label": "La Liga", "emoji": "⚽"},
-    "soccer_germany_bundesliga": {"label": "Bundesliga", "emoji": "⚽"},
     "soccer_italy_serie_a": {"label": "Serie A", "emoji": "⚽"},
-    "soccer_france_ligue_one": {"label": "Ligue 1", "emoji": "⚽"},
     "soccer_uefa_champs_league": {"label": "Champions League", "emoji": "🏆"},
-    "soccer_uefa_europa_league": {"label": "Europa League", "emoji": "🏆"},
     "mma_mixed_martial_arts": {"label": "UFC / MMA", "emoji": "🥊"},
     "basketball_nba": {"label": "NBA", "emoji": "🏀"},
-    "icehockey_nhl": {"label": "NHL", "emoji": "🏒"},
+    "cricket_ipl": {"label": "IPL Cricket", "emoji": "🏏"},
+    "cricket_international_t20": {"label": "T20 International", "emoji": "🏏"},
 }
+
 
 SPORTSBOOK_INFO = {
     "bet365":         {"url": "https://www.bet365.com",            "css": "btn-bet365"},
